@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist/tsc",
+    "lib": ["ESNext", "DOM"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "incremental": true,
+    "sourceMap": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "noEmit": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "types": [
+      "bun-types", // add Bun global
+      "@types/web"
+    ]
+  },
+  "files": ["./index.d.ts"],
+  "include": [],
+  "exclude": ["**/*.test.*"],
+  "$schema": "https://json.schemastore.org/tsconfig"
+}

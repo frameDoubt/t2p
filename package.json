@@ -1,0 +1,43 @@
+{
+  "name": "thoughts2paper",
+  "version": "0.1.99",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^10.10.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@types/web": "^0.0.99",
+    "bun-lightningcss": "^0.1.0",
+    "bun-types": "^0.7.3",
+    "chalk": "^5.3.0",
+    "dprint": "^0.40.2",
+    "react-refresh": "0.10.0",
+    "rimraf": "^5.0.1",
+    "terminal-link": "^3.0.0",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "dev": "bun --hot run dev.ts",
+    "test": "bun run clean; bun test src/**/*.test.* src/*.test.*",
+    "test:watch": "bun run clean; bun test --watch src/**/*.test.* src/*.test.*",
+    "format": "dprint fmt --config dprint.json",
+    "watch": "bun run clean; bun tsc --build ./tsconfig.json --watch",
+    "build": "bun run build:bun",
+    "build:bun": "bun run build:bun:prod",
+    "build:bun:dev": "bun -b ./build.ts dev",
+    "build:bun:prod": "bun -b ./build.ts prod",
+    "build:ts": "bun -b run tsc --build ./tsconfig.dev.json",
+    "build:all": "bun run clean; bun run build:ts; bun run build:bun:dev; bun run build:bun:prod ",
+    "clean": "rimraf dist"
+  },
+  "type": "module"
+}
