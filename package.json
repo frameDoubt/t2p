@@ -2,6 +2,7 @@
   "name": "thoughts2paper",
   "version": "0.1.99",
   "dependencies": {
+    "assemblyai": "^4.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^3.0.3"
